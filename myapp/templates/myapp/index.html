@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <form id="post-form">
+        <h1>Hotel Details Form</h1>
+        {%  csrf_token %}
+        <label>Hotel Name :</label>
+        <input type="text" id="hotelname" name="hotelname"/>
+        <span id="Nerror"></span><br><br>
+        
+        <label>Hotel Ph_no :</label>
+        <input type="text" id="ph_no" name="ph_no"/>
+        <span id="Perror"></span><br><br>
+
+        <label>Hotel Email :</label>
+        <input type="text" id="email" name="email"/>
+        <span id="id_e_error"></span><br><br>
+
+        <label>Hotel Address :</label>
+        <input type="text" id="address" name="address"/>
+        <span id="Aerror"></span><br><br>
+
+        <center><button type="submit">submit</button></center>
+        <div id="suc-msg"></div>
+
+    </form>
+</body>
+<script src="{% static 'js/form.js' %}"></script>
+</html>
